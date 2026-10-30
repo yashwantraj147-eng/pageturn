@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 238 84% 59%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 214 32% 92%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 92%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 238 84% 96%;
+    --accent-foreground: 238 84% 50%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 90%;
+    --input: 214 32% 90%;
+    --ring: 238 84% 59%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 45% 7%;
+    --foreground: 210 30% 98%;
+    --card: 224 38% 11%;
+    --card-foreground: 210 30% 98%;
+    --popover: 224 38% 11%;
+    --popover-foreground: 210 30% 98%;
+    --primary: 238 84% 67%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 224 30% 16%;
+    --secondary-foreground: 210 30% 98%;
+    --muted: 224 30% 16%;
+    --muted-foreground: 217.9 15% 65%;
+    --accent: 224 30% 18%;
+    --accent-foreground: 238 84% 75%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 210 30% 98%;
+    --border: 224 25% 18%;
+    --input: 224 25% 18%;
+    --ring: 238 84% 67%;
+  }
+
+  .sepia {
+    --background: 38 45% 94%;
+    --foreground: 25 35% 18%;
+    --card: 38 40% 90%;
+    --card-foreground: 25 35% 18%;
+    --popover: 38 40% 89%;
+    --popover-foreground: 25 35% 18%;
+    --primary: 24 75% 36%;
+    --primary-foreground: 38 45% 96%;
+    --secondary: 38 30% 84%;
+    --secondary-foreground: 25 35% 18%;
+    --muted: 38 30% 84%;
+    --muted-foreground: 25 18% 46%;
+    --accent: 38 40% 85%;
+    --accent-foreground: 24 75% 36%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 38 45% 96%;
+    --border: 38 25% 78%;
+    --input: 38 25% 78%;
+    --ring: 24 75% 36%;
+  }
+
+  .night {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 94%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 94%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 94%;
+    --primary: 152 76% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 94%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 152 76% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 152 76% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow: hidden;
+  }
+}
+
+/* ─── Premium Glassmorphism & Visual Polish ─── */
+.glass-header {
+  background: hsl(var(--card) / 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-pill {
+  background: hsl(var(--card) / 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsl(var(--border) / 0.6);
+}
+
+/* 3D Realistic Book Spine Lighting Crease */
+.book-spine-crease {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 22px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(255, 255, 255, 0.12) 18%,
+    rgba(0, 0, 0, 0.25) 32%,
+    rgba(255, 255, 255, 0.08) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+/* Realistic 3D Book Elevation Shadow */
+.book-card-shadow {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.12),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    2px 2px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.book-card-shadow:hover {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 8px 10px -6px rgba(0, 0, 0, 0.15),
+    4px 6px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Audio Wave Animation for TTS */
+@keyframes audio-pulse {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.audio-wave-bar {
+  animation: audio-pulse 1.2s ease-in-out infinite;
+}
+.audio-wave-bar:nth-child(2) { animation-delay: 0.2s; }
+.audio-wave-bar:nth-child(3) { animation-delay: 0.4s; }
+.audio-wave-bar:nth-child(4) { animation-delay: 0.1s; }
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.45);
+}

@@ -1,0 +1,102 @@
+appId: com.pageturn.app
+productName: PageTurn
+copyright: Copyright © 2024 PageTurn
+
+directories:
+  output: release
+  buildResources: resources
+
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - "!node_modules/**/*"
+
+extraResources:
+  - from: node_modules/better-sqlite3/build
+    to: better-sqlite3/build
+    filter:
+      - "**/*"
+
+asar: true
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: resources/icon.png
+  artifactName: "${productName}-${version}-Setup.${ext}"
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+
+  fileAssociations:
+    - ext: epub
+      name: EPUB Document
+      role: Viewer
+    - ext: pdf
+      name: PDF Document
+      role: Viewer
+    - ext: mobi
+      name: MOBI Document
+      role: Viewer
+    - ext: azw3
+      name: AZW3 Document
+      role: Viewer
+    - ext: fb2
+      name: FB2 Document
+      role: Viewer
+    - ext: cbz
+      name: CBZ Archive
+      role: Viewer
+    - ext: cbr
+      name: CBR Archive
+      role: Viewer
+    - ext: docx
+      name: DOCX Document
+      role: Viewer
+
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  icon: resources/icon.png
+  category: public.app-category.books
+  artifactName: "${productName}-${version}.${ext}"
+
+  fileAssociations:
+    - ext: epub
+      name: EPUB Document
+      role: Viewer
+    - ext: pdf
+      name: PDF Document
+      role: Viewer
+    - ext: mobi
+      name: MOBI Document
+      role: Viewer
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  icon: resources/icon.png
+  category: Office
+  artifactName: "${productName}-${version}.${ext}"
+
+  fileAssociations:
+    - ext: epub
+      name: EPUB Document
+      role: Viewer
+    - ext: pdf
+      name: PDF Document
+      role: Viewer
+    - ext: mobi
+      name: MOBI Document
+      role: Viewer
+

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#f5f7ff"/>
+    </linearGradient>
+    <linearGradient id="turnPage" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="60%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#312e81" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Left cover -->
+  <rect x="12" y="24" width="50" height="80" rx="3" ry="3" fill="url(#cover)" filter="url(#shadow)"/>
+
+  <!-- Left page lines -->
+  <rect x="18" y="30" width="38" height="68" rx="1" fill="url(#page)"/>
+  <line x1="24" y1="42" x2="50" y2="42" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="50" x2="48" y2="50" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="58" x2="50" y2="58" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="66" x2="44" y2="66" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="74" x2="50" y2="74" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="82" x2="46" y2="82" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Right cover -->
+  <rect x="66" y="24" width="50" height="80" rx="3" ry="3" fill="url(#cover)" filter="url(#shadow)"/>
+
+  <!-- Right page -->
+  <rect x="72" y="30" width="38" height="68" rx="1" fill="url(#page)"/>
+  <line x1="78" y1="42" x2="104" y2="42" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="78" y1="50" x2="102" y2="50" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="78" y1="58" x2="104" y2="58" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="78" y1="66" x2="98" y2="66" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="78" y1="74" x2="104" y2="74" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="78" y1="82" x2="100" y2="82" stroke="#a5b4fc" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Turning page (curled from right to left) -->
+  <path d="M 88 30 Q 78 34, 72 44 Q 66 56, 68 72 Q 70 88, 78 98 L 110 98 L 110 30 Z"
+        fill="url(#turnPage)" opacity="0.85" filter="url(#shadow)"/>
+  <!-- Curl shadow line -->
+  <path d="M 88 30 Q 78 34, 72 44 Q 66 56, 68 72 Q 70 88, 78 98"
+        fill="none" stroke="#818cf8" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Spine -->
+  <rect x="60" y="22" width="8" height="84" rx="1" fill="#4338ca" opacity="0.9"/>
+</svg>
