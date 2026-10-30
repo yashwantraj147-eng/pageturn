@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="windowBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+    <linearGradient id="cardGatsby" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="cardAlice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#3b0764" />
+    </linearGradient>
+    <linearGradient id="cardSherlock" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="25" stdDeviation="35" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background with grid pattern -->
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <path d="M0 75 H1200 M0 150 H1200 M0 225 H1200 M0 300 H1200 M0 375 H1200 M0 450 H1200 M0 525 H1200 M0 600 H1200" />
+    <path d="M75 0 V675 M150 0 V675 M225 0 V675 M300 0 V675 M375 0 V675 M450 0 V675 M525 0 V675 M600 0 V675 M675 0 V675 M750 0 V675 M825 0 V675 M900 0 V675 M975 0 V675 M1050 0 V675 M1125 0 V675" />
+  </g>
+
+  <!-- Ambient Glow Behind Window -->
+  <circle cx="600" cy="300" r="280" fill="#38bdf8" opacity="0.12" filter="url(#glow)" />
+  <circle cx="950" cy="450" r="200" fill="#a855f7" opacity="0.10" filter="url(#glow)" />
+
+  <!-- Main Window Frame -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="40" width="1100" height="595" rx="14" fill="url(#windowBg)" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Window Title Bar -->
+    <path d="M50 54 Q50 40 64 40 H1136 Q1150 40 1150 54 V82 H50 Z" fill="#0d131f" />
+    <line x1="50" y1="82" x2="1150" y2="82" stroke="#1f293d" stroke-width="1" />
+    
+    <!-- Window Controls (Mac / Modern style) -->
+    <circle cx="78" cy="61" r="5.5" fill="#ef4444" />
+    <circle cx="98" cy="61" r="5.5" fill="#f59e0b" />
+    <circle cx="118" cy="61" r="5.5" fill="#10b981" />
+
+    <!-- Title Bar Title & Status -->
+    <text x="600" y="66" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.5">PageTurn v1.0.0 — F. Scott Fitzgerald — The Great Gatsby</text>
+    <rect x="1040" y="52" width="88" height="20" rx="10" fill="#065f46" stroke="#059669" stroke-width="0.8" />
+    <text x="1084" y="66" fill="#34d399" font-family="sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">OLED ACTIVE</text>
+
+    <!-- Sidebar Navigation -->
+    <rect x="50" y="82" width="220" height="553" fill="#0a0e17" />
+    <line x1="270" y1="82" x2="270" y2="635" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Sidebar Brand -->
+    <g transform="translate(75, 105)">
+      <rect width="28" height="28" rx="7" fill="url(#brandGrad)" />
+      <path d="M8 8 H20 M8 14 H16 M8 20 H18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+      <text x="38" y="19" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="700">PageTurn</text>
+    </g>
+
+    <!-- Sidebar Menu Items -->
+    <g font-family="sans-serif" font-size="12.5" font-weight="500">
+      <rect x="65" y="152" width="190" height="32" rx="6" fill="#1e293b" />
+      <circle cx="85" cy="168" r="4" fill="#38bdf8" />
+      <text x="98" y="172" fill="#f8fafc" font-weight="600">All Books</text>
+      <text x="238" y="172" fill="#64748b" text-anchor="end">3</text>
+
+      <text x="98" y="210" fill="#94a3b8">Favorites</text>
+      <text x="98" y="244" fill="#94a3b8">Recent Reading</text>
+      <text x="98" y="278" fill="#94a3b8">Highlights &amp; Notes</text>
+      <text x="98" y="312" fill="#94a3b8">Collections</text>
+      <text x="98" y="346" fill="#94a3b8">Reading Stats</text>
+    </g>
+
+    <line x1="70" y1="375" x2="250" y2="375" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Themes Selector in Sidebar -->
+    <text x="75" y="405" fill="#64748b" font-family="sans-serif" font-size="10.5" font-weight="700" letter-spacing="1">APPEARANCE</text>
+    <g transform="translate(75, 420)">
+      <rect x="0" y="0" width="36" height="22" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+      <text x="18" y="15" fill="#0f172a" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">LGT</text>
+      
+      <rect x="44" y="0" width="36" height="22" rx="4" fill="#f4ecd8" stroke="#d5c8a7" stroke-width="1" />
+      <text x="62" y="15" fill="#443c2d" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">SEP</text>
+      
+      <rect x="88" y="0" width="36" height="22" rx="4" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+      <text x="106" y="15" fill="#e4e4e7" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">DRK</text>
+
+      <rect x="132" y="0" width="38" height="22" rx="4" fill="#000000" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="151" y="15" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">OLED</text>
+    </g>
+
+    <!-- Reading Area (Main Pane) -->
+    <rect x="270" y="82" width="880" height="553" fill="#05070c" />
+
+    <!-- Reader Header Toolbar -->
+    <rect x="270" y="82" width="880" height="42" fill="#0a0e17" />
+    <line x1="270" y1="124" x2="1150" y2="124" stroke="#1e293b" stroke-width="1" />
+    <text x="295" y="108" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="600">Chapter III — The Long Island Sound</text>
+    <text x="710" y="108" fill="#64748b" font-family="sans-serif" font-size="11">Page 42 of 180 • 23% Complete</text>
+    
+    <!-- Reader Action Icons (mock) -->
+    <g transform="translate(1000, 95)" stroke="#94a3b8" stroke-width="1.8" fill="none">
+      <circle cx="12" cy="12" r="7" />
+      <path d="M12 9 V15 M9 12 H15" />
+      <rect x="40" y="5" width="14" height="14" rx="2" />
+      <path d="M72 6 L78 12 L72 18" />
+    </g>
+
+    <!-- Reader Two-Page Spread or Centered Content -->
+    <g transform="translate(360, 150)" font-family="Georgia, serif">
+      <text x="0" y="30" fill="#f1f5f9" font-size="24" font-weight="bold">Chapter III</text>
+      
+      <!-- Text Paragraph with Karaoke Sentence Highlight -->
+      <text x="0" y="70" fill="#94a3b8" font-size="14.5" line-height="24">
+        <tspan x="0" dy="0">There was music from my neighbor's house through the summer nights. In his</tspan>
+        <tspan x="0" dy="26">blue gardens men and girls came and went like moths among the whisperings</tspan>
+        <tspan x="0" dy="26">and the champagne and the stars. At high tide in the afternoon I watched</tspan>
+      </text>
+
+      <!-- Active Karaoke Sentence Highlight Bar -->
+      <rect x="-8" y="152" width="710" height="48" rx="6" fill="#38bdf8" fill-opacity="0.14" stroke="#0284c7" stroke-dasharray="3 3" />
+      
+      <!-- Karaoke Highlighted text with Word Highlight -->
+      <text x="0" y="174" fill="#e0f2fe" font-size="14.5">
+        <tspan fill="#38bdf8">his guests diving from the tower of his raft,</tspan>
+        <tspan fill="#ffffff" font-weight="bold" text-decoration="underline"> or taking the sun </tspan>
+        <tspan fill="#38bdf8">on the hot sand</tspan>
+      </text>
+      <text x="0" y="196" fill="#38bdf8" font-size="14.5">
+        <tspan>of his beach while his two motor-boats slit the waters of the Sound.</tspan>
+      </text>
+
+      <text x="0" y="240" fill="#94a3b8" font-size="14.5">
+        <tspan x="0" dy="0">On week-ends his Rolls-Royce became an omnibus, bearing parties to and from</tspan>
+        <tspan x="0" dy="26">the city between nine in the morning and long past midnight, while his station</tspan>
+        <tspan x="0" dy="26">wagon scampered like a brisk yellow bug to meet all trains.</tspan>
+      </text>
+    </g>
+
+    <!-- Floating TTS Karaoke Player Bar -->
+    <g transform="translate(460, 520)" filter="url(#shadow)">
+      <rect width="500" height="66" rx="33" fill="#0f172a" stroke="#38bdf8" stroke-width="1.6" />
+      
+      <!-- TTS Voice Avatar / Icon -->
+      <circle cx="36" cy="33" r="18" fill="url(#brandGrad)" />
+      <!-- Waveform icon inside circle -->
+      <path d="M26 33 H28 M30 28 V38 M33 24 V42 M36 21 V45 M39 26 V40 M42 29 V37 M45 33 H47" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Current Voice & Track info -->
+      <text x="68" y="27" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">TTS Karaoke Engine</text>
+      <text x="68" y="44" fill="#38bdf8" font-family="sans-serif" font-size="10.5" font-weight="500">Microsoft David • Sentence 4/12 • 1.1x Speed</text>
+
+      <!-- Player Controls -->
+      <!-- Prev -->
+      <path d="M280 33 L290 26 V40 Z M276 26 V40" fill="#94a3b8" stroke="#94a3b8" stroke-width="1.5" />
+      
+      <!-- Play/Pause Button (Cyan Glow) -->
+      <circle cx="325" cy="33" r="17" fill="#0284c7" />
+      <rect x="319" y="25" width="4" height="16" rx="1.5" fill="#ffffff" />
+      <rect x="327" y="25" width="4" height="16" rx="1.5" fill="#ffffff" />
+
+      <!-- Next -->
+      <path d="M360 26 L370 33 L360 40 Z M374 26 V40" fill="#94a3b8" stroke="#94a3b8" stroke-width="1.5" />
+
+      <!-- Speed Badge -->
+      <rect x="395" y="22" width="38" height="22" rx="11" fill="#1e293b" stroke="#334155" />
+      <text x="414" y="37" fill="#e2e8f0" font-family="sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">1.1x</text>
+
+      <!-- Stop / Dismiss -->
+      <circle cx="462" cy="33" r="11" fill="#1e293b" />
+      <path d="M458 29 L466 37 M466 29 L458 37" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Mini Book Carousel in corner showing Multi-Format Engine -->
+    <g transform="translate(1005, 415)" opacity="0.95">
+      <rect x="-8" y="-8" width="130" height="180" rx="8" fill="#0a0f1d" stroke="#1e293b" />
+      <rect width="114" height="164" rx="4" fill="url(#cardGatsby)" stroke="#38bdf8" stroke-width="0.8" />
+      <!-- Book spine shine -->
+      <rect x="4" y="4" width="8" height="156" rx="2" fill="#ffffff" opacity="0.1" />
+      <text x="57" y="55" fill="#f8fafc" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">THE GREAT</text>
+      <text x="57" y="70" fill="#38bdf8" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle">GATSBY</text>
+      <text x="57" y="115" fill="#94a3b8" font-family="sans-serif" font-size="8.5" text-anchor="middle">EPUB • 180pp</text>
+      <rect x="27" y="132" width="60" height="14" rx="7" fill="#0369a1" />
+      <text x="57" y="142.5" fill="#e0f2fe" font-family="sans-serif" font-size="7.5" font-weight="bold" text-anchor="middle">READING</text>
+    </g>
+
+  </g>
+</svg>

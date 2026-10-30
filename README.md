@@ -22,11 +22,25 @@
 
 ## Screenshots
 
-> _Screenshots coming soon._
+<p align="center">
+  <img src="resources/preview.svg" alt="PageTurn UI Preview with TTS Karaoke and OLED Theme" width="100%">
+</p>
 
 ---
 
 ## Features
+
+### 🎙️ Floating TTS Karaoke Player & Accessibility
+- **Synchronized Karaoke Highlighting**: Real-time sentence and word-level visual karaoke highlighting while reading aloud.
+- **Floating Player Bar**: Floating playback HUD with play, pause, sentence-skip backward/forward, and auto-scroll to current speaking point.
+- **Voice & Engine Selection**: Native speech synthesis integration with system voice selector.
+- **Speed Pitch & Rate Controls**: Granular speed presets from 0.5x to 2.0x for rapid skimming or careful study.
+
+### 🎨 4 High-Contrast & Eye-Care Themes
+- **Light Theme**: Clean, high-legibility studio lighting for bright rooms.
+- **Sepia Parchment**: Soft, warm paper tone reducing eye fatigue during long reading sessions.
+- **Dark Studio**: Modern charcoal dark mode for low-light evening environments.
+- **OLED Pure Black**: True `#000000` pitch black background engineered for OLED displays and battery savings.
 
 ### 📚 Library Management
 - Import books via drag-and-drop or file picker
@@ -101,7 +115,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/pageturn.git
+git clone https://github.com/yashwantraj147-eng/pageturn.git
 cd pageturn
 
 # Install dependencies
@@ -159,7 +173,7 @@ pageturn/
 ├── package.json
 ├── vite.config.ts
 ├── vitest.config.ts
-├── tailwind.config.js
+├── tailwind.config.ts
 └── tsconfig.json
 ```
 
@@ -246,4 +260,4 @@ Please follow existing code style and conventions. All new features should inclu
 
 ## License
 
-[MIT](LICENSE) © PageTurn
+[MIT](LICENSE) © 2026 Yashwant Raj
